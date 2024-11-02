@@ -1,0 +1,11 @@
+os
+json
+argparse
+logging
+python-dotenv
+requests
+beautifulsoup4
+serpapi
+openai
+streamlit
+pypandoc
