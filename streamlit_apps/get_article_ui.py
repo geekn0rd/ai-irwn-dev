@@ -3,6 +3,9 @@ import sys
 import streamlit as st
 import pypandoc
 
+# Download the needed .pkg
+pypandoc.download_pandoc()
+
 # Adjusting the path to include the parent directory
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(parent_dir)
@@ -60,7 +63,6 @@ if st.session_state.selected_article:
         st.subheader("Translated Content")
         st.markdown(farsi_translation)
         # Specify the output file path
-        pypandoc.download_pandoc()
         output_file = 'output.docx'
         # Convert Markdown to DOCX
         pypandoc.convert_text(farsi_translation, 'docx', format='md', outputfile=output_file)
