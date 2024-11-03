@@ -3,8 +3,6 @@ import sys
 import streamlit as st
 import pypandoc
 
-# Download the needed .pkg
-pypandoc.download_pandoc()
 
 # Adjusting the path to include the parent directory
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
